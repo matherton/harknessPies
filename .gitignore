@@ -37,3 +37,9 @@ __screenshots__/
 
 # Vite
 *.timestamp-*-*.mjs
+
+# TypeScript compiled output
+src/**/*.js
+src/**/*.js.map
+vite.config.js
+vite.config.js.map
