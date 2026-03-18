@@ -121,7 +121,7 @@ const featuredProducts = [
               Sign up today for exclusive member discounts, loyalty rewards and
               early access to our seasonal specials!
             </v-card-text>
-            <v-btn color="white" size="large" @click="loginWithRedirect()">
+            <v-btn color="black" size="large" @click="loginWithRedirect()">
               Sign Up Now
             </v-btn>
           </v-card>
