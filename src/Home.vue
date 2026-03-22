@@ -18,7 +18,7 @@ const featuredProducts = [
     name: "Chicken & Leek Pie",
     description: "Creamy chicken and fresh leek in a buttery pastry",
     price: 5.99,
-    image: "https://images.unsplash.com/photo-1604579839969-e6f96c2c6923?w=400",
+    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400",
   },
   {
     id: 3,
@@ -133,8 +133,26 @@ const featuredProducts = [
 
 <style scoped>
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.5);
+  background: url("/src/img/pastry.webp");
+  background-size: cover;
   width: 100%;
   height: 100%;
+  position: relative;
+}
+
+.hero-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-overlay > * {
+  position: relative;
+  z-index: 2;
 }
 </style>
