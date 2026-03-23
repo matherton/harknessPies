@@ -15,13 +15,14 @@ const drawer = ref(false);
       <!-- Hamburger button - only shows on mobile -->
       <v-app-bar-nav-icon class="d-flex d-md-none" @click="drawer = !drawer" />
 
-      <v-app-bar-title>Harkness Pies</v-app-bar-title>
+      <v-app-bar-title
+        ><v-btn @click="router.push('/')">Harkness Pies</v-btn>
+      </v-app-bar-title>
 
       <v-spacer />
 
       <!-- Desktop navigation - hidden on mobile -->
       <div class="d-none d-md-flex align-center">
-        <v-btn @click="router.push('/')">Home</v-btn>
         <v-btn @click="router.push('/shop')">Shop</v-btn>
         <v-btn @click="router.push('/about')">About</v-btn>
         <v-btn>Contact</v-btn>
