@@ -7,6 +7,8 @@ import Footer from "./Footer.vue";
 const { loginWithRedirect, logout, isAuthenticated } = useAuth0();
 const router = useRouter();
 const drawer = ref(false);
+
+const returnTo = window.location.origin;
 </script>
 
 <template>
@@ -37,9 +39,7 @@ const drawer = ref(false);
         </v-btn>
         <v-btn
           v-if="isAuthenticated"
-          @click="
-            logout({ logoutParams: { returnTo: window.location.origin } })
-          "
+          @click="logout({ logoutParams: { returnTo } })"
           variant="outlined"
           class="ml-2"
         >
@@ -93,7 +93,7 @@ const drawer = ref(false);
           v-if="isAuthenticated"
           title="Log Out"
           @click="
-            logout({ logoutParams: { returnTo: window.location.origin } });
+            logout({ logoutParams: { returnTo } });
             drawer = false;
           "
         />
