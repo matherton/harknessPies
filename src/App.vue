@@ -37,7 +37,9 @@ const drawer = ref(false);
         </v-btn>
         <v-btn
           v-if="isAuthenticated"
-          @click="logout()"
+          @click="
+            logout({ logoutParams: { returnTo: window.location.origin } })
+          "
           variant="outlined"
           class="ml-2"
         >
@@ -91,7 +93,7 @@ const drawer = ref(false);
           v-if="isAuthenticated"
           title="Log Out"
           @click="
-            logout();
+            logout({ logoutParams: { returnTo: window.location.origin } });
             drawer = false;
           "
         />
