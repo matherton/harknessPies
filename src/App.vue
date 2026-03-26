@@ -8,7 +8,10 @@ const { loginWithRedirect, logout, isAuthenticated } = useAuth0();
 const router = useRouter();
 const drawer = ref(false);
 
-const returnTo = window.location.origin;
+const returnTo =
+  window.location.hostname === "localhost"
+    ? window.location.origin
+    : `${window.location.origin}/harknessPies`;
 </script>
 
 <template>
